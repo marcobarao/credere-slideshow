@@ -1,12 +1,80 @@
 .credere-card {
   margin: auto;
   width: 100%;
-  height: 100%;
-  padding: 15px;
+  height: 487px;
   opacity: 0;
   visibility: hidden;
   box-shadow: 0 4px 8px 2px rgba($dark-color, 0.25);
-  transition: 0.3s;
+  transition: opacity 300ms;
   border-radius: 5px;
   box-sizing: border-box;
+  > .image {
+    width: 100%;
+    height: 35%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px 5px 0 0;
+  }
+  > .content {
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    > .title {
+      font-size: 1.5rem;
+    }
+    > .subtitle {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .credere-card {
+    &.-imgLeft {
+      > .image {
+        float: left;
+        width: calc(30% + 30px);
+        height: 487px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px 0 0 5px;
+      }
+      > .content {
+        float: left;
+        width: 65%;
+        height: 100%;
+        padding: 0 5%;
+        box-sizing: border-box;
+        > .title {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    &.-imgFull {
+      > .image {
+        width: 100%;
+        height: 487px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+      }
+      > .content {
+        color: #fff;
+        position: absolute;
+      }
+    }
+    &.-textLeft {
+      > .content {
+        left: 20px;
+        bottom: 50px;
+      }
+    }
+    &.-textRight {
+      > .content {
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
 }

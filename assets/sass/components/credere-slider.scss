@@ -1,25 +1,22 @@
 .credere-slider {
   display: block;
   position: relative;
-  max-width: 600px;
   width: 100vw;
-  max-height: 400px;
-  height: 66vw;
-  margin: auto;
-  margin-top: 20px;
+  height: 100%;
+  min-height: 400px;
   padding: 0;
+  margin: 0;
   > .slide {
-    width: 100%;
-    height: 100%;
-    list-style: none;
     position: absolute;
+    width: 100%;
+    list-style: none;
     > .radio {
       display: none;
       &:checked ~ .label {
         display: block;
         right: 15px;
         + .-previous {
-          right: 110px;
+          right: 120px;
         }
       }
       &:checked ~ .credere-card {
@@ -39,10 +36,23 @@
       color: $zero-color;
       cursor: pointer;
       z-index: 10;
+      box-shadow: 0 3px $secondary-color;
+      transition: background-color 200ms linear;
+
       &.-previous {
         color: $secondary-color;
         background-color: $zero-color;
         right: 120px;
+        box-shadow: 0 3px rgba($secondary-color, 0.6);
+
+        &:hover {
+          background-color: lighten($secondary-color, 30);
+        }
+        &:active {
+          background-color: lighten($secondary-color, 30);
+          box-shadow: 0 2px rgba($secondary-color, 0.6);
+          transform: translateY(3px);
+        }
       }
       &::selection {
         background: transparent;
@@ -50,6 +60,28 @@
       &::-moz-selection {
         background: transparent;
       }
+      &:hover {
+        background-color: darken($primary-color, 5);
+      }
+      &:active {
+        background-color: darken($primary-color, 5);
+        box-shadow: 0 2px $secondary-color;
+        transform: translateY(3px);
+      }
     }
+  }
+}
+
+@media (min-width: 600px) {
+  .credere-slider {
+    display: block;
+    position: relative;
+    max-width: 600px;
+    width: 100vw;
+    max-height: 400px;
+    height: 66vw;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0;
   }
 }
