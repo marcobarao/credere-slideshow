@@ -1,7 +1,7 @@
 .credere-card {
   margin: auto;
   width: 100%;
-  height: 487px;
+  height: 100%;
   opacity: 0;
   visibility: hidden;
   box-shadow: 0 4px 8px 2px rgba($dark-color, 0.25);
@@ -10,14 +10,14 @@
   box-sizing: border-box;
   > .image {
     width: 100%;
-    height: 35%;
+    height: 40%;
     object-fit: cover;
     object-position: center;
     border-radius: 5px 5px 0 0;
   }
   > .content {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 70px;
     box-sizing: border-box;
     > .title {
       font-size: 1.5rem;
@@ -30,11 +30,23 @@
 
 @media (min-width: 600px) {
   .credere-card {
+    height: 256px;
+    > .content {
+      margin: 0 auto;
+    }
+    &.-imgTop {
+      > .content {
+        transform: translateY(-90px);
+        > .paragraph {
+          margin-top: 70px;
+        }
+      }
+    }
     &.-imgLeft {
       > .image {
         float: left;
         width: calc(30% + 30px);
-        height: 487px;
+        height: 256px;
         object-fit: cover;
         object-position: center;
         border-radius: 5px 0 0 5px;
@@ -48,32 +60,60 @@
         > .title {
           font-size: 1.5rem;
         }
+        > .subtitle {
+          color: $secondary-color;
+        }
       }
     }
     &.-imgFull {
       > .image {
         width: 100%;
-        height: 487px;
+        height: 256px;
         object-fit: cover;
         object-position: center;
         border-radius: 5px;
       }
       > .content {
-        color: #fff;
+        color: $zero-color;
         position: absolute;
       }
     }
     &.-textLeft {
       > .content {
+        display: block;
+        width: 320px;
         left: 20px;
-        bottom: 50px;
+        bottom: 80px;
       }
     }
     &.-textRight {
       > .content {
+        display: block;
+        width: 320px;
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
+        text-align: end;
+      }
+    }
+    &.-textZero {
+      > .content {
+        color: $zero-color;
+      }
+    }
+    &.-textDark {
+      > .content {
+        color: $dark-color;
+      }
+    }
+    &.-textPrimary {
+      > .content {
+        color: $primary-color;
+      }
+    }
+    &.-textSecondary {
+      > .content {
+        color: $secondary-color;
       }
     }
   }
