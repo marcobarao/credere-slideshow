@@ -1,0 +1,30 @@
+[
+  {
+    "classes": ["-imgTop", "-textDark"],
+    "image": "./assets/images/thumbnail_01.jpg",
+    "title": "Facilidade",
+    "subtitle": "Ao cadastrar o cliente no CDC",
+    "paragraph": "Captação de dados automático para o cadastro de CDC, através de fotos dos documentos, mais agilidade e segurança das informações."
+  },
+  {
+    "classes": ["-imgLeft"],
+    "image": "./assets/images/thumbnail_02.jpg",
+    "title": "Integração",
+    "subtitle": "Resultado de processos de forma rápida e fácil",
+    "paragraph": "Conexão direta com os bancos via integração com respostas automáticas e em tempo real dos processos."
+  },
+  {
+    "classes": ["-imgFull", "-textLeft"],
+    "image": "./assets/images/thumbnail_03.jpg",
+    "title": "Simule orçamentos",
+    "subtitle": "",
+    "paragraph": "Simule o orçamento de financiamento do seu cliente de uma maneira simples e precisa."
+  },
+  {
+    "classes": ["-imgFull", "-textRight", "-textDark"],
+    "image": "./assets/images/thumbnail_04.jpg",
+    "title": "Chance de aprovação",
+    "subtitle": "",
+    "paragraph": "Cálculo de chance de aprovação do financiamento em tempo real."
+  }
+]
