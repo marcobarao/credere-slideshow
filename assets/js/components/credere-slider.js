@@ -1,5 +1,5 @@
 (function() {
-  var news = axios.get("/news.json");
+  var news = axios.get("news.json");
   var $slider = document.getElementById("slider");
 
   news
