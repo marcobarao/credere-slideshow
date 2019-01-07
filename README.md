@@ -33,7 +33,7 @@ npm install -g live-server ou yarn global add live-server
 live-server
 ```
 
-3. Abra seu navegador e vá para a url _http://127.0.0.1:8000/_
+3. Abra seu navegador e vá para a url _http://127.0.0.1:8080/_
 
 ### OU
 
