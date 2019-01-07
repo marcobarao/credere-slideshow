@@ -35,6 +35,6 @@ live-server
 
 3. Abra seu navegador e vá para a url _http://127.0.0.1:8000/_
 
-##OU
+### OU
 
 1. Entre no site: https://marcobarao.github.io/credere-slideshow
